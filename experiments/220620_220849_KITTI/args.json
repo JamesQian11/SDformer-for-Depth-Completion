@@ -1,0 +1,119 @@
+{
+    "dir_data": "../KITTI_DC",
+    "data_name": "KITTIDC",
+    "split_json": "../data_json/kitti_dc.json",
+    "patch_height": 320,
+    "patch_width": 1216,
+    "top_crop": 20,
+    "seed": 7240,
+    "gpus": "0,1",
+    "port": "29500",
+    "num_threads": 1,
+    "no_multiprocessing": false,
+    "model_name": "SDFORMER",
+    "window_sizes1": [
+        [
+            4,
+            4
+        ],
+        [
+            8,
+            8
+        ],
+        [
+            16,
+            16
+        ]
+    ],
+    "window_sizes2": [
+        [
+            4,
+            4
+        ],
+        [
+            8,
+            8
+        ],
+        [
+            16,
+            16
+        ]
+    ],
+    "window_sizes3": [
+        [
+            4,
+            4
+        ],
+        [
+            8,
+            8
+        ],
+        [
+            8,
+            16
+        ]
+    ],
+    "window_sizes4": [
+        [
+            4,
+            4
+        ],
+        [
+            4,
+            8
+        ],
+        [
+            4,
+            19
+        ]
+    ],
+    "inp_channels": 4,
+    "out_channels": 1,
+    "dim": 12,
+    "num_blocks": [
+        2,
+        2,
+        6,
+        8
+    ],
+    "heads": [
+        1,
+        2,
+        4,
+        8
+    ],
+    "num_refinement_blocks": 2,
+    "ffn_expansion_factor": 2.08,
+    "bias": false,
+    "LayerNorm_type": "WithBias",
+    "loss": "1.0*L1+1.0*L2",
+    "opt_level": "O0",
+    "pretrain": null,
+    "resume": false,
+    "test_only": false,
+    "epochs": 20,
+    "batch_size": 4,
+    "max_depth": 90.0,
+    "augment": true,
+    "num_sample": 0,
+    "test_crop": false,
+    "num_summary": 4,
+    "lr": 0.0002,
+    "decay": "10,15,20,25",
+    "gamma": "1.0,0.2,0.04,0.008",
+    "optimizer": "ADAM",
+    "momentum": 0.9,
+    "betas": [
+        0.9,
+        0.999
+    ],
+    "epsilon": 1e-08,
+    "weight_decay": 0.0,
+    "warm_up": true,
+    "save": "KITTI",
+    "save_full": false,
+    "save_image": false,
+    "save_result_only": false,
+    "num_gpus": 2,
+    "save_dir": "../experiments/220620_220849_KITTI"
+}

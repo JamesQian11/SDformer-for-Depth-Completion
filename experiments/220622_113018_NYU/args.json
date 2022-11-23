@@ -1,0 +1,119 @@
+{
+    "dir_data": "../nyudepthv2/",
+    "data_name": "NYU",
+    "split_json": "../data_json/nyu.json",
+    "patch_height": 228,
+    "patch_width": 304,
+    "top_crop": 0,
+    "seed": 7240,
+    "gpus": "0,1",
+    "port": "29500",
+    "num_threads": 1,
+    "no_multiprocessing": false,
+    "model_name": "SDFORMER",
+    "window_sizes1": [
+        [
+            12,
+            16
+        ],
+        [
+            6,
+            8
+        ],
+        [
+            4,
+            4
+        ]
+    ],
+    "window_sizes2": [
+        [
+            6,
+            19
+        ],
+        [
+            19,
+            8
+        ],
+        [
+            6,
+            4
+        ]
+    ],
+    "window_sizes3": [
+        [
+            3,
+            19
+        ],
+        [
+            19,
+            4
+        ],
+        [
+            3,
+            4
+        ]
+    ],
+    "window_sizes4": [
+        [
+            29,
+            38
+        ],
+        [
+            29,
+            19
+        ],
+        [
+            29,
+            2
+        ]
+    ],
+    "inp_channels": 4,
+    "out_channels": 1,
+    "dim": 24,
+    "num_blocks": [
+        2,
+        4,
+        6,
+        8
+    ],
+    "heads": [
+        1,
+        2,
+        4,
+        8
+    ],
+    "num_refinement_blocks": 2,
+    "ffn_expansion_factor": 2.88,
+    "bias": false,
+    "LayerNorm_type": "WithBias",
+    "loss": "1.0*L1+1.0*L2",
+    "opt_level": "O0",
+    "pretrain": null,
+    "resume": false,
+    "test_only": false,
+    "epochs": 25,
+    "batch_size": 8,
+    "max_depth": 10.0,
+    "augment": true,
+    "num_sample": 500,
+    "test_crop": false,
+    "num_summary": 4,
+    "lr": 0.0003,
+    "decay": "10,15,20,25",
+    "gamma": "1.0,0.2,0.04,0.008",
+    "optimizer": "ADAM",
+    "momentum": 0.9,
+    "betas": [
+        0.9,
+        0.999
+    ],
+    "epsilon": 1e-08,
+    "weight_decay": 0.0,
+    "warm_up": true,
+    "save": "NYU",
+    "save_full": false,
+    "save_image": false,
+    "save_result_only": false,
+    "num_gpus": 2,
+    "save_dir": "../experiments/220622_113018_NYU"
+}
