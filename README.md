@@ -130,19 +130,3 @@ KITTI DC Online evaluation data:
 $ cd SDformer/src
 $ python main.py --split_json ../data_json/kitti_dc_test.json --test_only --pretrain pretrain --save_image --save_result_only --save online_kitti
 ```
-### ACCV2022
-To Reviewer:
-
-Thank you for your kind reviewing.
-
-The training and testing information of NYU Depth V2 dataset at path: experiments/220622_113018_NYU,
-
-and the training and testing information for KITTI Depth Completion dataset path: experiments/220620_220849_KITTI,
-
-and we also get the online test results for KITTI Depth Completion: experiments/Online Testing for KITTI.pdf .
-
-We apply the pretrain models: [pretrain](https://drive.google.com/drive/folders/1c75UuRCqYrkb5-18DmMRNMU5JoRenGe3?usp=sharing)
-
-Since there are two datasets need to be train and test, we also set the different config information for that, please check the config: file src/config.py.
-
-For Params and FLOPs Evaluation, please check the model file: src/model/sdformermodel.py we set the related configuration for that.
